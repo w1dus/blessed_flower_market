@@ -46,10 +46,77 @@ select::-ms-expand{ display:none; }
 p{ word-break: keep-all; }
 
 @media screen and (max-width: 1250px) { 
-    .inner{ width:100%; padding:0 10px; }
+    .inner{ width:100%; padding:0 3vw; }
 } /* tablet */
 @media screen and (max-width: 650px) { 
     .paging_box{ font-size: 13px; }
 } /* mobile */
 
 
+/* header */
+header{ background-color: #111; position: fixed; left: 0; top: 0; width: 100%; z-index: 99999; }
+header .logo-div .inner{ position: relative; padding: 16px 0; display: flex; align-items: center; justify-content: center; }
+header .menu-div{ border-top: 1px solid #F7F6F2; border-bottom: 1px solid #F7F6F2; font-family: 'KoPubWorldBatang'; background-color: #343A40; padding: 15px 0; color: #fff; }
+header .menu-div .menu-list{ text-align: center; display: flex; color: #F7F6F2;   }
+header .menu-div .menu-list > li{ border-left: 1px solid #F7F6F2; width: calc(100% / 5); }
+header .menu-div .menu-list > li:last-child{ border-right: 1px solid #F7F6F2; }
+header .menu-btn{ display: none; }
+@media screen and (max-width: 1250px) { 
+    header .logo{ width: 300px; }
+    header .menu-div .menu-list{ font-size: 14px; }
+}
+@media screen and (max-width: 750px) { 
+    header .menu-div{ display: none; }
+    header .menu-btn{ display: block; background: transparent; border: none; position: absolute; right: 3vw;  }
+    header .menu-btn .icon{ width: 40px; }
+}
+@media screen and (max-width: 650px) { 
+    header .logo{ width: 200px; }
+    header .menu-btn .icon{ width: 30px; }
+}
+
+/* .pc-slide-menu */
+.pc-slide-menu{ display: none; font-family: 'KoPubWorldBatang'; color: #F7F6F2; position: fixed; left: 0; top: 0; padding-top: 133px; background-color: #343A40; width: 100%; z-index: 99; }
+/* .pc-slide-menu.show{ opacity: 1; visibility: visible; } */
+.pc-slide-menu .menu-list{ text-align: center; display: flex; }
+.pc-slide-menu .menu-list > li{ line-height: 2em; border-left: 1px solid rgba(247, 246, 242, .2); padding: 22px 10px; width: calc(100% / 5); }
+.pc-slide-menu .menu-list > li:last-child{ border-right: 1px solid rgba(247, 246, 242, .2); }
+
+@media screen and (max-width: 1250px) { 
+    .pc-slide-menu{ padding-top: 119px; }
+    .pc-slide-menu .menu-list{ font-size: 14px; }
+}
+@media screen and (max-width: 750px) { 
+    .pc-slide-menu{ display: none !important; }
+}
+
+/* .pc-menu-close */
+.pc-menu-close{ opacity: 0; visibility: hidden; background-color: rgba(0,0,0,.5); position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 98; }
+.pc-menu-close.show{ opacity: 1; visibility: visible; }
+@media screen and (max-width: 750px) { 
+    .pc-menu-close{ display: none; }
+}
+
+
+/* .mobile-menu-div */
+.mobile-menu-div{ display: none; position: fixed; right: 0; top: 0; width: 100%; height: 100%; background-color: #111; z-index: 999999;  }
+@media screen and (max-width: 750px) { 
+    .mobile-menu-div{ display: block; opacity: 0; visibility: hidden; transition: opacity .5s, visibility .5s; font-size: 6vw; font-family: 'KoPubWorldBatang'; color: #F7F6F2; padding: 10px 3vw 15px 3vw; }
+    .mobile-menu-div.show{ opacity: 1; visibility: visible; }
+    .mobile-menu-div .btn-div{ padding-bottom: 30px; display: flex; align-items: center; justify-content: flex-end; }
+    .mobile-menu-div .close-btn{ background: transparent; border: none; }
+    .mobile-menu-div .close-btn .icon{ width: 30px; }
+    .mobile-menu-div .menu-list > li + li{ margin-top: 2vw;  }
+    .mobile-menu-div .item{ border-bottom: 1px solid rgba(247, 246, 242, .2); display: block; padding: 1vw 0 2vw 0; width: 100%; }
+    .mobile-menu-div .item .icon{ width: 5vw; }
+    .mobile-menu-div .item.sub{ display: flex; align-items: center; justify-content: space-between; }
+    .mobile-menu-div .item.sub.show .icon{ transform: rotate(180deg); } 
+    .mobile-menu-div .sub-menu-list{ display: none; margin-top: 3vw; }
+    .mobile-menu-div .sub-menu-list > li{ margin-top: 1vw; }
+    .mobile-menu-div .sub-item{ opacity: .6; font-size: 5vw; }
+}
+@media screen and (max-width: 500px) { 
+    .mobile-menu-div{ font-size: 8vw; }
+    .mobile-menu-div .menu-list > li + li{ margin-top: 3vw;  }
+    .mobile-menu-div .item .icon{ width: 15px; }
+}
