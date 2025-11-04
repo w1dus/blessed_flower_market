@@ -2,7 +2,7 @@
 
 /* 색 설정 */
 :root {
-    --main-color: #CF2E41;
+    --main-color: #FA7000;
     --black-color : #222;
     --white-color : #fff
 }
@@ -54,7 +54,8 @@ p{ word-break: keep-all; }
 
 
 /* header */
-header{ background-color: #111; position: fixed; left: 0; top: 0; width: 100%; z-index: 99999; }
+header{ background-color: #111; position: fixed; left: 0; top: 0; width: 100%; z-index: 99999; transition: top .5s; }
+header.scroll-down{ top:-83px; }
 header .logo-div .inner{ position: relative; padding: 16px 0; display: flex; align-items: center; justify-content: center; }
 header .menu-div{ border-top: 1px solid #F7F6F2; border-bottom: 1px solid #F7F6F2; font-family: 'KoPubWorldBatang'; background-color: #343A40; padding: 15px 0; color: #fff; }
 header .menu-div .menu-list{ text-align: center; display: flex; color: #F7F6F2;   }
@@ -64,11 +65,13 @@ header .menu-btn{ display: none; }
 @media screen and (max-width: 1250px) { 
     header .logo{ width: 300px; }
     header .menu-div .menu-list{ font-size: 14px; }
+    header.scroll-down{ top:-72px; }
 }
 @media screen and (max-width: 750px) { 
     header .menu-div{ display: none; }
     header .menu-btn{ display: block; background: transparent; border: none; position: absolute; right: 3vw;  }
     header .menu-btn .icon{ width: 40px; }
+    header.scroll-down{ top:0; }
 }
 @media screen and (max-width: 650px) { 
     header .logo{ width: 200px; }
@@ -76,7 +79,8 @@ header .menu-btn{ display: none; }
 }
 
 /* .pc-slide-menu */
-.pc-slide-menu{ display: none; font-family: 'KoPubWorldBatang'; color: #F7F6F2; position: fixed; left: 0; top: 0; padding-top: 133px; background-color: #343A40; width: 100%; z-index: 99; }
+.pc-slide-menu{ border-bottom: 1px solid #F7F6F2; display: none; font-family: 'KoPubWorldBatang'; color: #F7F6F2; position: fixed; left: 0; top: 0; padding-top: 133px; background-color: #343A40; width: 100%; z-index: 99; }
+.pc-slide-menu.scroll-down{ top: -83px; }
 /* .pc-slide-menu.show{ opacity: 1; visibility: visible; } */
 .pc-slide-menu .menu-list{ text-align: center; display: flex; }
 .pc-slide-menu .menu-list > li{ line-height: 2em; border-left: 1px solid rgba(247, 246, 242, .2); padding: 22px 10px; width: calc(100% / 5); }
@@ -101,7 +105,7 @@ header .menu-btn{ display: none; }
 /* .mobile-menu-div */
 .mobile-menu-div{ display: none; position: fixed; right: 0; top: 0; width: 100%; height: 100%; background-color: #111; z-index: 999999;  }
 @media screen and (max-width: 750px) { 
-    .mobile-menu-div{ display: block; opacity: 0; visibility: hidden; transition: opacity .5s, visibility .5s; font-size: 6vw; font-family: 'KoPubWorldBatang'; color: #F7F6F2; padding: 10px 3vw 15px 3vw; }
+    .mobile-menu-div{ display: block; opacity: 0; visibility: hidden; transition: opacity .5s, visibility .5s; font-size: 6vw; font-family: 'KoPubWorldBatang'; color: #F7F6F2; padding: 5px 3vw 15px 3vw; }
     .mobile-menu-div.show{ opacity: 1; visibility: visible; }
     .mobile-menu-div .btn-div{ padding-bottom: 30px; display: flex; align-items: center; justify-content: flex-end; }
     .mobile-menu-div .close-btn{ background: transparent; border: none; }
@@ -120,3 +124,247 @@ header .menu-btn{ display: none; }
     .mobile-menu-div .menu-list > li + li{ margin-top: 3vw;  }
     .mobile-menu-div .item .icon{ width: 15px; }
 }
+
+
+
+
+/* footer */
+.footer-start{ background: linear-gradient(90deg, #2E2E2E 0%, #F7F6F2 50%, #2E2E2E 100%); height: 1px; }
+footer{ background-color: #2E2E2E; padding: 45px 0; position: relative; overflow: hidden; }
+footer::before{ content:''; display: block; height: 100%; position: absolute; background-image: url('../img/footer/footer-left.png'); background-size: auto 200px; background-position: right center; background-repeat: no-repeat; width: calc((100% - 1200px) / 2); left: 0; top: 0; }
+footer::after{ content:''; display: block; height: 100%; position: absolute; background-image: url('../img/footer/footer-right.png'); background-size: auto 200px; background-position: left center; background-repeat: no-repeat; width: calc((100% - 1200px) / 2); right: 0; top: 0; }
+
+footer .inner{ padding: 0 124px; display: flex; align-items: flex-start; gap: 129px; color: #F7F6F2; }
+footer .sns-box{ padding-left: 36px; display: flex; align-items: center; gap: 10px; margin-top: 17px; }
+footer .copy_right{ margin-top: 13px; padding-left: 36px; color: #525252; font-size: 12px; }
+footer .copy_right.mo{ display: none; }
+footer .privacy-btn{ font-family: "KoPubWorldBatang"; display: inline-block; padding-bottom: 5px; border-bottom: 1px solid #fff; }
+footer .info-list{ font-size: 14px; margin-top: 11px; display: grid; grid-template-columns: repeat(2,1fr); grid-gap: 10px;  }
+footer .info-list > li{ display: flex; gap: 10px; padding-right: 20px; }
+footer .info-list .label{ flex-shrink: 0; font-family: "KoPubWorldBatang"; flex-shrink: 0; width: 100px; }
+
+@media screen and (max-width: 1250px) { 
+    footer .inner{ padding: 0 3vw; gap: 50px; }
+    footer .sns-box{ padding: 0; }
+    footer .copy_right{ padding:0; }
+}
+@media screen and (max-width: 950px) { 
+    footer .inner{ flex-direction: column; gap: 20px; }
+    footer .sns-box .icon{ width: 30px; }
+    footer .copy_right.mo{ margin-top: 30px; display: block; }
+    footer .copy_right.pc{ display: none; }
+    footer .info-list{ grid-template-columns: repeat(1,1fr); } 
+    footer .info-list > li{ padding-right: 0; }
+}
+@media screen and (max-width: 650px) { 
+    footer { padding-top: 30px; }
+    footer .logo{ width: 200px; }
+    footer .sns-box .icon{ width: 20px; }
+}
+
+/* .main .main-visual */
+.main .main-visual{ position: relative; overflow: hidden; height: 100vh; }
+
+/* .main .logo-section */
+.main .logo-section{ background-color: #343A40; border-top: 1px solid #F28C28; border-bottom: 1px solid #F28C28; padding: 20px 0; display: flex; align-items: center; justify-content: center; overflow: hidden; gap: 90px; }
+.main .logo-section .logo{ flex-shrink: 0; }
+.main .logo-section .bg{ flex-shrink: 0; }
+@media screen and (max-width: 1250px) { 
+    .main .logo-section .logo{ width: 200px; }
+}
+@media screen and (max-width: 950px) { 
+    .main .logo-section{ gap: 20px; }
+    .main .logo-section .bg{ height: 90px; }
+}
+@media screen and (max-width: 650px) { 
+    .main .logo-section .logo{ width: 150px; }
+}
+
+/* .main .everyday-section */
+.main .everyday-section{ padding: 47px 0; background-color: #343A40; }
+.main .everyday-section .inner{ display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.main .everyday-section .visual{ max-width: 100%; border-radius: 10px; }
+.main .everyday-section h2{ font-family: "KoPubWorldBatang"; margin-top: 37px; font-size: 52px; color: #F28C28;}
+.main .everyday-section .moBr{ display: none; }
+.main .everyday-section .content{ word-break: keep-all; margin-top: 25px; text-align: center; line-height: 1.5em; color: #fff; }
+.main .btn-center-div{ margin-top: 20px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.main .btn-center-div .view-more{ display: inline-block; padding: 7px 40px; color: #F7F6F2; background: #3A6F5B; font-family: "KoPubWorldBatang"; }
+
+@media screen and (max-width: 1250px) { 
+    .main .everyday-section h2{ font-size: 40px; }
+}
+@media screen and (max-width: 950px) { 
+    .main .everyday-section h2{ font-size: 30px; }
+}
+@media screen and (max-width: 650px) { 
+    .main .everyday-section h2{ font-size: 6.5vw; line-height: 1.5em; }
+    .main .btn-center-div{ margin-top: 30px; }
+    .main .everyday-section .content br{ display: none; }
+    .main .btn-center-div .view-more{ padding: 6px 20px; }
+}
+
+/* .main .main-title-section */
+.main .main-title-section{ font-size: 32px; color: #F28C28; font-family: "KoPubWorldBatang"; padding: 27px 0; text-align: center; background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #111; }
+
+@media screen and (max-width: 1250px) { 
+    .main .main-title-section{ font-size: 28px; }
+}
+@media screen and (max-width: 950px) { 
+    .main .main-title-section{ font-size: 24px; }
+}
+@media screen and (max-width: 650px) { 
+    .main .main-title-section{ padding: 15px 0; font-size: 6vw;} 
+}
+
+
+/* .main .gallery-section  */
+.main .gallery-section{ padding: 25px 0; background: linear-gradient(0deg, #343A40 0%, #343A40 100%), #2E2E2E; }
+.gallery-list{ display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 16px; }
+.gallery-list > li{ margin-top: 10px; }
+.gallery-list .img-box{ height: 378px; background-size: cover; background-repeat: no-repeat; background-position: center; border-radius: 10px; }
+.gallery-list .subject{ margin-top: 10px; font-size: 21px; color: #F7F6F2; width: 100%; display: -webkit-box; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical; }
+
+@media screen and (max-width: 1250px) { 
+    .gallery-list .img-box{ height: 30vw; }
+    .gallery-list .subject{ font-size: 18px; }
+}
+@media screen and (max-width: 650px) { 
+    .main .gallery-section{ padding-bottom: 50px; } 
+    .gallery-list{ grid-template-columns: repeat(2, 1fr); grid-gap: 10px; }
+    .gallery-list > li{ margin-top: 5px; }
+    .gallery-list .img-box{ border-radius: 5px; height: 45vw; }
+    .gallery-list .subject{ font-size: 16px; } 
+}
+
+/* .main .store-section  */
+.main .store-section{ padding: 44px 0 50px 0; background: #343A40; }
+.main .store-section .store-list{ display: grid; grid-template-columns: repeat(2,1fr); }
+.main .store-section .store-list.type2{ margin-top: 20px; grid-template-columns: repeat(3,1fr); }
+.main .store-section .store-list .item .img-box{ position: relative; overflow: hidden; height: 310px; }
+.main .store-section .store-list .item .img-box .real{ transition: transform .5s; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; background-position: center; }
+.main .store-section .store-list .item:hover .img-box .real{ transform: scale(1.1); }
+.main .store-section .store-list .item .title{ display: -webkit-box; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical; word-break: keep-all; background-color: #111; padding: 7px 13px; color: #F28C28; font-weight: 700; font-size: 18px; }
+.main .store-section .store-list .item .address{ display: -webkit-box; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical; word-break: keep-all; margin-top: 3px; padding: 0 13px; line-height: 1.5em; font-weight: 600; color: #fff; }
+
+@media screen and (max-width: 1250px) {
+    .main .store-section .store-list .item .img-box{ height: 24vw; }
+}
+@media screen and (max-width: 950px) {
+    .main .store-section .store-list{ grid-template-columns: repeat(1,1fr); grid-gap: 15px; }
+    .main .store-section .store-list.type2{ grid-template-columns: repeat(1,1fr); grid-gap: 15px; }
+    .main .store-section .store-list .item .img-box{ height: 47vw; }
+}
+
+/* .main .note-section */
+.main .note-section{ padding: 75px 0; background-color: #343A40; }
+.note-list{ color: #F7F6F2; display: grid; grid-template-columns: repeat(4,1fr); grid-gap: 23px; }
+.note-list .item .img-box{ height: 283px; background-size: cover; background-repeat: no-repeat; background-position: center; }
+.note-list .item .subject{ margin-top: 9px; font-weight: 700; display: -webkit-box; overflow: hidden; -webkit-line-clamp: 1; -webkit-box-orient: vertical; word-break: keep-all; }
+
+@media screen and (max-width: 1250px) {
+    .main .note-section{ padding-top: 44px; }
+    .note-list .item .img-box{ height: 22vw; }
+}
+@media screen and (max-width: 950px) {
+    .note-list{ grid-gap: 15px; }
+}
+@media screen and (max-width: 650px) {
+    .main .note-section{ padding-top: 34px; }
+    .note-list{ grid-gap: 10px; grid-template-columns: repeat(2,1fr); }
+    .note-list > li{ margin-top: 5px; }
+    .note-list .item .img-box{ height: 45vw; }
+}
+
+/* .main .menu-section */
+.main .menu-section{ background-color: #111; padding: 40px 0; display: flex; }
+.main .menu-section > a{ position: relative; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; min-height: 500px; height: 80vh; width: calc(100% / 3); }
+.main .menu-section > a .real{ transition: opacity .5s; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; background-position: center; opacity: .3; }
+.main .menu-section > a:hover .real{ opacity: .5; }
+.main .menu-section .t1{ position: relative; z-index: 1; color: #F28C28; font-family: "KoPubWorldBatang"; font-size: 32px; }
+.main .menu-section .t2{ position: relative; z-index: 1; margin-top: 8px; color: #fff; font-weight: 600; }
+
+@media screen and (max-width: 1250px) {
+    .main .menu-section .t1{ font-size: 26px; }
+    .main .menu-section > a{ min-height: unset; height:45vw; }
+}
+@media screen and (max-width: 950px) {
+    .main .menu-section{ flex-direction: column; }
+    .main .menu-section > a{ width: 100%; }
+}
+@media screen and (max-width: 650px) {
+    .main .menu-section > a{ height: auto; padding:16vw 0; }
+    .main .menu-section .t1{ font-size: 24px; }
+}
+
+/* .sec_top */
+.sec_top{ padding-top: 133px; }
+@media screen and (max-width: 1250px) {
+    .sec_top{ padding-top: 119px; }
+}
+@media screen and (max-width: 750px) {
+    .sec_top{ padding-top: 71.5px; }
+}
+@media screen and (max-width: 650px) {
+    .sec_top{ padding-top: 58.34px; }
+}
+
+/* .sub .sub-banner */
+.sub .sub-banner{ border-bottom: 1px solid #F28C28; font-family: "NanumMyeongjo"; color: #F7F6F2; background-color: #000; padding: 74px 0; }
+.sub .sub-banner .inner{ display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.sub .sub-banner .bar{ width: 80px; height: 1px; background-color: #fff; margin: 17px 0 5px 0; }
+.sub .sub-banner h2{ font-size: 80px;  }
+
+@media screen and (max-width: 1250px) {
+    .sub .sub-banner .logo{ width: 140px; }  
+    .sub .sub-banner .bar{ width: 60px; }
+    .sub .sub-banner h2{ font-size: 60px; }
+}
+@media screen and (max-width: 950px) {
+    .sub .sub-banner h2{ font-size: 50px; }
+}
+@media screen and (max-width: 650px) {
+    .sub .sub-banner .bar{ width: 40px; }
+    .sub .sub-banner h2{ font-size: 40px; margin-top: 5px; }
+}
+
+/* .sub1_1 .section1 */
+.sub1_1 .section1{ position: relative; font-family: "KoPubWorldBatang"; background-image: url("../img/sub/sub1/sub1_1/section1/bg.png"); background-repeat: no-repeat; background-position: top 27px center; padding: 150px 0 78px 0; background-color: #343A40;  }
+.sub h3.title{ font-size: 32px; color: #F28C28; font-family: "KoPubWorldBatang";  }
+.sub1_1 .section1 .visual-box{ display: flex; align-items: center; justify-content: center; margin-top: 18px; padding: 145px 0; background-image: url('../img/sub/sub1/sub1_1/section1/visual.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; }
+.sub1_1 .section1 .visual-box .white-box{ color: #343A40; line-height: 1.5em; font-size: 18px; background-color: #FFF; border-radius: 4px; padding: 65px 20px; text-align: center; }
+
+section.line-bar{ height: 1px; background: linear-gradient(90deg, #2E2E2E 0%, #F7F6F2 50%, #2E2E2E 100%); }
+@media screen and (max-width: 1250px) {
+    .sub1_1 .section1{ padding: 80px 0; }
+    .sub h3.title{ font-size: 30px; }
+    .sub1_1 .section1 .visual-box{ padding: 100px 30px; }
+    .sub1_1 .section1 .visual-box .white-box{ word-break: keep-all; font-size: 16px; }
+}
+@media screen and (max-width: 950px) {
+    .sub1_1 .section1 .visual-box br{ display: none; }
+}
+@media screen and (max-width: 650px) {
+    h3.title{ font-size: 25px; }
+    .sub1_1 .section1{ background-size: 150vw; background-position: top 1vw center; }
+    .sub1_1 .section1 .visual-box{ margin-top: 10px; padding: 50px 30px; }
+}
+
+/*  .sub1_1 .section2 */
+.sub1_1 .section2{ color: #fff; background-color: #343A40; padding: 67px 0 61px 0; }
+.sub1_1 .section2 .item-div .item{ word-break: keep-all; line-height: 1.8em; display: flex; gap: 30px; margin-top: 24px; }
+.sub1_1 .section2 .item-div .content{ width: 50%;} 
+.sub1_1 .section2 .item-div .img-div{ width: 50%; height: 432px; background-size: cover; background-repeat: no-repeat; background-position: center; }
+.sub1_1 .section2 .item-div .label{ font-size: 18px; margin-top: 18px; font-family: "KoPubWorldBatang"; }
+
+@media screen and (max-width: 1250px) {
+    .sub1_1 .section2 .item-div .item{ gap: 15px; }
+    .sub1_1 .section2 .item-div .content br{ display: none; }
+    .sub1_1 .section2 .item-div .img-div{ height: 33vw; }
+    .sub1_1 .section2 .item-div .label{ font-size: 16px; }
+}
+@media screen and (max-width: 950px) {
+    .sub1_1 .section2 .item-div .item{ flex-direction: column; }
+    .sub1_1 .section2 .item-div .content{ width: 100%;} 
+    .sub1_1 .section2 .item-div .img-div{ width: 100%; height: 68vw; }
+}
+
