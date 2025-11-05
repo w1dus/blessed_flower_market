@@ -6,7 +6,7 @@
 .menuBox{ display: flex; align-items: center; justify-content: flex-end; padding: 20px 0; }
 .menuBox .menuList{ display: flex; align-items: center; justify-content: flex-end; gap: 8px; font-size: 14px; color: #4D4D4D; flex-wrap: wrap; }
 .menuBox .menuList > li{ position: relative;  }
-.menuBox .menuList .item{ display: flex; gap: 3px; padding: 2px 5px; border-radius: 5px; border: none; }
+.menuBox .menuList .item{ background-color: rgb(239, 239, 239); display: flex; gap: 3px; padding: 2px 5px; border-radius: 5px; border: none; }
 .menuBox .menuList .subMenu{ 
     position: absolute; right: 0; top: calc(100% + 12px); padding: 0px 8px; min-width: calc(100% + 20px); border: 1px solid #E6E6E6; text-align: center; z-index: 9; 
     opacity: 0; visibility: hidden; background-color: #fff; 

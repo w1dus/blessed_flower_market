@@ -36,7 +36,9 @@ a{ color:inherit; }
 
 .inner{ width:1200px; margin:0 auto; }
 
-.paging_box{ padding:10px 0; display:flex; align-items: center; justify-content: center; }
+.paging_box{ padding:45px 0 0 0; display:flex; align-items: center; justify-content: center; }
+.paging_box .pg_page{ background-color:#343A40; border:1px solid #343A40; }
+.paging_box .pg_current{ background-color: #3A6F5B; border-color: #3A6F5B;  }
 
 select{
     -webkit-appearance: none; -moz-appearance: none;  appearance: none;
@@ -307,7 +309,8 @@ footer .info-list .label{ flex-shrink: 0; font-family: "KoPubWorldBatang"; flex-
 @media screen and (max-width: 650px) {
     .sec_top{ padding-top: 58.34px; }
 }
-
+/* .sub */
+.sub{ background-color: rgb(0, 0, 0); }
 /* .sub .sub-banner */
 .sub .sub-banner{ border-bottom: 1px solid #F28C28; font-family: "NanumMyeongjo"; color: #F7F6F2; background-color: #000; padding: 74px 0; }
 .sub .sub-banner .inner{ display: flex; flex-direction: column; align-items: center; justify-content: center; }
@@ -324,7 +327,7 @@ footer .info-list .label{ flex-shrink: 0; font-family: "KoPubWorldBatang"; flex-
 }
 @media screen and (max-width: 650px) {
     .sub .sub-banner .bar{ width: 40px; }
-    .sub .sub-banner h2{ font-size: 40px; margin-top: 5px; }
+    .sub .sub-banner h2{ font-size: 9vw; margin-top: 5px; }
 }
 
 /* .sub1_1 .section1 */
@@ -368,3 +371,38 @@ section.line-bar{ height: 1px; background: linear-gradient(90deg, #2E2E2E 0%, #F
     .sub1_1 .section2 .item-div .img-div{ width: 100%; height: 68vw; }
 }
 
+/* .sub1_1 .section3 */
+.sub1_1 .section3{ background-color: #343A40; padding: 50px 0; color: #fff; }
+.sub1_1 .section3 .half-div{ margin-top: 20px; display: flex; align-items: center; gap: 30px; }
+.sub1_1 .section3 .half-div .img-box{ flex-shrink: 0; width: 584px; height: 290px; background-size: cover; background-repeat: no-repeat; background-position: center; }
+.sub1_1 .section3 .half-div .content-box{ word-break: keep-all; line-height: 1.6em; }
+
+.sub1_1 .section3 .img-div{ margin-top: 20px; display: flex; gap: 20px; }
+.sub1_1 .section3 .img-div .img-box{ width: calc(100% / 3); background-size: cover; background-repeat: no-repeat; background-position: center; height: 432px; }
+
+@media screen and (max-width: 1250px) {
+    .sub1_1 .section3 .half-div .img-box{ width: calc((100% / 3) - 15px ); height: 32vw; }
+    .sub1_1 .section3 .img-div .img-box{ height: 32vw; }
+}
+@media screen and (max-width: 950px) {
+    .sub1_1 .section3 .half-div { flex-direction: column; gap: 20px; }
+    .sub1_1 .section3 .half-div .img-box{ width: 100%; }
+    .sub1_1 .section3 .half-div .content-box{ width: 100%; }
+}
+@media screen and (max-width: 650px) {
+    .sub1_1 .section3 .img-div{ gap: 10px; }  
+    .sub1_1 .section3 .half-div .content-box br{ display: none; }
+}
+
+/* .sub2_1 .section1 */
+.sub2_1 .section1{ padding: 21px 0 115px 0; background-color: #343A40; }
+.sub2_1 .section1 .menu-list{ text-align: center; margin-bottom: 62px; display: grid; grid-template-columns: repeat(4,1fr); grid-gap: 20px; }
+.sub2_1 .section1 .menu-list .item{ font-family: "KoPubWorldBatang"; border: 1px solid #2E2E2E; background-color: #2E2E2E; text-align: center; padding: 13px 10px; color: #fff; }
+.sub2_1 .section1 .menu-list .item.on{ border-color: #F28C28; color: #F28C28; }
+.sub2_1 .section1 .gallery-list{ margin-top: 10px; }
+@media screen and (max-width: 950px) {
+    .sub2_1 .section1 .menu-list{ grid-gap: 5px; margin-bottom: 20px; }
+    .sub2_1 .section1 .menu-list .item{ display: flex; align-items: center; justify-content: center; font-size: 14px; }
+}
+
+.sub .allchk.white{ color: #F7F6F2; }
