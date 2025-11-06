@@ -75,7 +75,7 @@
                         <ul class="sub-list">
                             <li><a href="./sub5_1.html">Notice</a></li>
                             <li><a href="./sub5_2.html">FAQ</a></li>
-                            <li><a href="./sub5_3.html">Support</a></li>
+                            <li><a href="./sub5_3.html" class="suport-btn">Support</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -111,11 +111,63 @@
                     <ul class="sub-menu-list">
                         <li><a href="./sub5_1.html" class="sub-item">Notice</a></li>
                         <li><a href="./sub5_2.html" class="sub-item">FAQ</a></li>
-                        <li><a href="./sub5_3.html" class="sub-item">Support</a></li>
+                        <li><a href="./sub5_3.html" class="sub-item suport-btn">Support</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
+        <!--고객센터 문의-->
+        <section class="apply-popup">
+            <div class="inner">
+                <article class="content-arti">
+                    <div class="btn-div">
+                        <button type="button" class="close-btn">
+                            <img src="./img/sub/sub3/close-icon.svg" alt="닫기" class="icon" />
+                        </button>
+                    </div>
+                    <div class="white-content">
+                        <h5>문의하기</h5>
+                        <ul class="formList">
+                            <li class="half">
+                                <div class="label">이름 <span>*</span></div>
+                                <div class="iptBox">
+                                    <input type="text" required placeholder="내용을 입력해주세요" class="ipt" />
+                                </div>
+                            </li>
+                            <li class="half">
+                                <div class="label">연락처 <span>*</span></div>
+                                <div class="iptBox">
+                                    <input type="text" required placeholder="내용을 입력해주세요" class="ipt" />
+                                </div>
+                            </li>
+                            <li class="">
+                                <div class="label">이메일 <span>*</span></div>
+                                <div class="iptBox">
+                                    <input type="email" required placeholder="내용을 입력해주세요" class="ipt" />
+                                </div>
+                            </li>
+                            <li>
+                                <div class="label">문의내용 <span>*</span></div>
+                                <div class="iptBox">
+                                    <textarea name="" placeholder="내용을 입력해주세요" class="ipt"></textarea>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- ✅ 동의 체크박스 -->
+                        <div class="agreeCheckDiv">
+                            <label>
+                                <input type="checkbox"/>
+                                <div class="textBox">개인정보 처리방침 동의 <span class="privacyPopupBtn">(확인)</span></div>
+                            </label>
+                        </div>
+                        <div class="form-btn-wrap">
+                            <button type="submit" class="submit-btn">문의하기</button>
+                        </div>
+
+                    </div>
+                </article>
+            </div>
+        </section>
         <!--개인정보처리방침-->
         <section class="privacyPopup" id="privacyPopup">
             <div class="inner">
@@ -132,7 +184,195 @@
         </section>
         <main id="smooth-wrapper">
             <article id="smooth-content">
-              <main class="sub4 sub4_2 ">
+              <main class="sub sub4 sub4_1 ">
+
+                <section class="sec_top black">
+                    <section class="sub-banner">
+                        <div class="inner">
+                        <img src="./img/sub/logo.svg" alt="blessed flower market" class="logo" />
+                        <div class="bar"></div>
+                        <h2>JOURNAL</h2>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="menu-section">
+                    <div class="inner">
+                        <div class="menu-list">
+                            <a href="./sub4_1.html" class="item">Blessed Event</a>
+                            <a href="./sub4_2.html" class="item on">Life Style</a>
+                            <a href="./sub4_3.html" class="item">Blessed Story</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="main-title-section">
+                    <div class="inner">
+                        <h2>Blessed Event</h2>
+                    </div>
+                </section>
+
+                <section class="section2">
+                    <div class="inner">
+
+                        <div class="menuBox">
+                            <ul class="menuList">
+                                <li>
+                                    <a href="#" class="item"><img src="./img/boardImg/settings.png" alt="관리자"/> <p class="txt">관리자</p></a>
+                                </li>
+                                <li>
+                                    <button type="button" class="item"><img src="./img/boardImg/search.png" alt="검색"/> <p class="txt">검색</p></button>
+                                    <div class="subMenu">
+                                        <div class="searchBox">
+                                            <select class="searchList">
+                                                <option value="제목">제목</option>
+                                                <option value="내용">내용</option>
+                                            </select>
+                                            <div class="iptBox">
+                                                <input type="text" placeholder="검색어를 입력해주세요." class="ipt"/>
+                                                <button class="searchBtn"><img src="./img/boardImg/search.png" alt="검색"/></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="./write.html" class="item"><img src="./img/boardImg/write.png" alt="글쓰기"/> <p class="txt">글쓰기</p></a>
+                                </li>
+                                <li>
+                                    <button type="button" class="item"><img src="./img/boardImg/threedot.png" alt="편집"/> <p class="txt">편집</p></button>
+                                    <ul class="subMenu">
+                                        <li><button type="button" class="item">선택삭제</button></li>
+                                        <li><a href="#" class="item2">선택복사</a></li>
+                                        <li><a href="#" class="item2">선택이동</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <label class="allchk">
+                            <input type="checkbox" />
+                            전체선택
+                        </label>
+                        <ul class="img-list">
+                            <li>
+                                <input type="checkbox" />
+                                <a href="./view.html">
+                                    <div class="item">
+                                        <div class="img-box" style="background-image: url('./img/sub/sub4/example.jpg');"></div>
+                                        <div class="content-div">
+                                            <div class="title">게시물 제목</div>
+                                            <div class="content">
+                                                디자인도 글쓰기와 정말 닮아있다. 글의 주제는 사업 아이템이고, 골격은 레이아웃이다. 단락은 섹션이고, 문장은 섹션의 각 엘리먼트 그룹이며, 단어 하나는 엘리먼트 하나다. 
+                                                가능한 짧은 문장을 쓰려는 노력도 마찬가지다. 디자인에서도 ‘Simple is the best’는 불변의 진리 아닌가. 또한 이렇게 구조의 닮음뿐만 아니라 표현도 닮아있다. 
+                                                글의 어조와 뉘앙스는 디자인에서 컬러톤이며, 비유는 아이콘과 같다. 맞춤법은 디자인에서 정교함을 만드는 Pixel Perfect 작업이다.
+                                                디자인도 글쓰기와 정말 닮아있다. 글의 주제는 사업 아이템이고, 골격은 레이아웃이다. 단락은 섹션이고, 문장은 섹션의 각 엘리먼트 그룹이며, 단어 하나는 엘리먼트 하나다. 
+                                                가능한 짧은 문장을 쓰려는 노력도 마찬가지다. 디자인에서도 ‘Simple is the best’는 불변의 진리 아닌가. 또한 이렇게 구조의 닮음뿐만 아니라 표현도 닮아있다. 
+                                                글의 어조와 뉘앙스는 디자인에서 컬러톤이며, 비유는 아이콘과 같다. 맞춤법은 디자인에서 정교함을 만드는 Pixel Perfect 작업이다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <input type="checkbox" />
+                                <a href="./view.html">
+                                    <div class="item">
+                                        <div class="img-box" style="background-image: url('./img/sub/sub4/example.jpg');"></div>
+                                        <div class="content-div">
+                                            <div class="title">게시물 제목</div>
+                                            <div class="content">
+                                                디자인도 글쓰기와 정말 닮아있다. 글의 주제는 사업 아이템이고, 골격은 레이아웃이다. 단락은 섹션이고, 문장은 섹션의 각 엘리먼트 그룹이며, 단어 하나는 엘리먼트 하나다. 
+                                                가능한 짧은 문장을 쓰려는 노력도 마찬가지다. 디자인에서도 ‘Simple is the best’는 불변의 진리 아닌가. 또한 이렇게 구조의 닮음뿐만 아니라 표현도 닮아있다. 
+                                                글의 어조와 뉘앙스는 디자인에서 컬러톤이며, 비유는 아이콘과 같다. 맞춤법은 디자인에서 정교함을 만드는 Pixel Perfect 작업이다.
+                                                디자인도 글쓰기와 정말 닮아있다. 글의 주제는 사업 아이템이고, 골격은 레이아웃이다. 단락은 섹션이고, 문장은 섹션의 각 엘리먼트 그룹이며, 단어 하나는 엘리먼트 하나다. 
+                                                가능한 짧은 문장을 쓰려는 노력도 마찬가지다. 디자인에서도 ‘Simple is the best’는 불변의 진리 아닌가. 또한 이렇게 구조의 닮음뿐만 아니라 표현도 닮아있다. 
+                                                글의 어조와 뉘앙스는 디자인에서 컬러톤이며, 비유는 아이콘과 같다. 맞춤법은 디자인에서 정교함을 만드는 Pixel Perfect 작업이다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <input type="checkbox" />
+                                <a href="./view.html">
+                                    <div class="item">
+                                        <div class="img-box" style="background-image: url('./img/sub/sub4/example.jpg');"></div>
+                                        <div class="content-div">
+                                            <div class="title">게시물 제목</div>
+                                            <div class="content">
+                                                디자인도 글쓰기와 정말 닮아있다. 글의 주제는 사업 아이템이고, 골격은 레이아웃이다. 단락은 섹션이고, 문장은 섹션의 각 엘리먼트 그룹이며, 단어 하나는 엘리먼트 하나다. 
+                                                가능한 짧은 문장을 쓰려는 노력도 마찬가지다. 디자인에서도 ‘Simple is the best’는 불변의 진리 아닌가. 또한 이렇게 구조의 닮음뿐만 아니라 표현도 닮아있다. 
+                                                글의 어조와 뉘앙스는 디자인에서 컬러톤이며, 비유는 아이콘과 같다. 맞춤법은 디자인에서 정교함을 만드는 Pixel Perfect 작업이다.
+                                                디자인도 글쓰기와 정말 닮아있다. 글의 주제는 사업 아이템이고, 골격은 레이아웃이다. 단락은 섹션이고, 문장은 섹션의 각 엘리먼트 그룹이며, 단어 하나는 엘리먼트 하나다. 
+                                                가능한 짧은 문장을 쓰려는 노력도 마찬가지다. 디자인에서도 ‘Simple is the best’는 불변의 진리 아닌가. 또한 이렇게 구조의 닮음뿐만 아니라 표현도 닮아있다. 
+                                                글의 어조와 뉘앙스는 디자인에서 컬러톤이며, 비유는 아이콘과 같다. 맞춤법은 디자인에서 정교함을 만드는 Pixel Perfect 작업이다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <input type="checkbox" />
+                                <a href="./view.html">
+                                    <div class="item">
+                                        <div class="img-box" style="background-image: url('./img/sub/sub4/example.jpg');"></div>
+                                        <div class="content-div">
+                                            <div class="title">게시물 제목</div>
+                                            <div class="content">
+                                                디자인도 글쓰기와 정말 닮아있다. 글의 주제는 사업 아이템이고, 골격은 레이아웃이다. 단락은 섹션이고, 문장은 섹션의 각 엘리먼트 그룹이며, 단어 하나는 엘리먼트 하나다. 
+                                                가능한 짧은 문장을 쓰려는 노력도 마찬가지다. 디자인에서도 ‘Simple is the best’는 불변의 진리 아닌가. 또한 이렇게 구조의 닮음뿐만 아니라 표현도 닮아있다. 
+                                                글의 어조와 뉘앙스는 디자인에서 컬러톤이며, 비유는 아이콘과 같다. 맞춤법은 디자인에서 정교함을 만드는 Pixel Perfect 작업이다.
+                                                디자인도 글쓰기와 정말 닮아있다. 글의 주제는 사업 아이템이고, 골격은 레이아웃이다. 단락은 섹션이고, 문장은 섹션의 각 엘리먼트 그룹이며, 단어 하나는 엘리먼트 하나다. 
+                                                가능한 짧은 문장을 쓰려는 노력도 마찬가지다. 디자인에서도 ‘Simple is the best’는 불변의 진리 아닌가. 또한 이렇게 구조의 닮음뿐만 아니라 표현도 닮아있다. 
+                                                글의 어조와 뉘앙스는 디자인에서 컬러톤이며, 비유는 아이콘과 같다. 맞춤법은 디자인에서 정교함을 만드는 Pixel Perfect 작업이다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <input type="checkbox" />
+                                <a href="./view.html">
+                                    <div class="item">
+                                        <div class="img-box" style="background-image: url('./img/sub/sub4/example.jpg');"></div>
+                                        <div class="content-div">
+                                            <div class="title">게시물 제목</div>
+                                            <div class="content">
+                                                디자인도 글쓰기와 정말 닮아있다. 글의 주제는 사업 아이템이고, 골격은 레이아웃이다. 단락은 섹션이고, 문장은 섹션의 각 엘리먼트 그룹이며, 단어 하나는 엘리먼트 하나다. 
+                                                가능한 짧은 문장을 쓰려는 노력도 마찬가지다. 디자인에서도 ‘Simple is the best’는 불변의 진리 아닌가. 또한 이렇게 구조의 닮음뿐만 아니라 표현도 닮아있다. 
+                                                글의 어조와 뉘앙스는 디자인에서 컬러톤이며, 비유는 아이콘과 같다. 맞춤법은 디자인에서 정교함을 만드는 Pixel Perfect 작업이다.
+                                                디자인도 글쓰기와 정말 닮아있다. 글의 주제는 사업 아이템이고, 골격은 레이아웃이다. 단락은 섹션이고, 문장은 섹션의 각 엘리먼트 그룹이며, 단어 하나는 엘리먼트 하나다. 
+                                                가능한 짧은 문장을 쓰려는 노력도 마찬가지다. 디자인에서도 ‘Simple is the best’는 불변의 진리 아닌가. 또한 이렇게 구조의 닮음뿐만 아니라 표현도 닮아있다. 
+                                                글의 어조와 뉘앙스는 디자인에서 컬러톤이며, 비유는 아이콘과 같다. 맞춤법은 디자인에서 정교함을 만드는 Pixel Perfect 작업이다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <input type="checkbox" />
+                                <a href="./view.html">
+                                    <div class="item">
+                                        <div class="img-box" style="background-image: url('./img/sub/sub4/example.jpg');"></div>
+                                        <div class="content-div">
+                                            <div class="title">게시물 제목</div>
+                                            <div class="content">
+                                                디자인도 글쓰기와 정말 닮아있다. 글의 주제는 사업 아이템이고, 골격은 레이아웃이다. 단락은 섹션이고, 문장은 섹션의 각 엘리먼트 그룹이며, 단어 하나는 엘리먼트 하나다. 
+                                                가능한 짧은 문장을 쓰려는 노력도 마찬가지다. 디자인에서도 ‘Simple is the best’는 불변의 진리 아닌가. 또한 이렇게 구조의 닮음뿐만 아니라 표현도 닮아있다. 
+                                                글의 어조와 뉘앙스는 디자인에서 컬러톤이며, 비유는 아이콘과 같다. 맞춤법은 디자인에서 정교함을 만드는 Pixel Perfect 작업이다.
+                                                디자인도 글쓰기와 정말 닮아있다. 글의 주제는 사업 아이템이고, 골격은 레이아웃이다. 단락은 섹션이고, 문장은 섹션의 각 엘리먼트 그룹이며, 단어 하나는 엘리먼트 하나다. 
+                                                가능한 짧은 문장을 쓰려는 노력도 마찬가지다. 디자인에서도 ‘Simple is the best’는 불변의 진리 아닌가. 또한 이렇게 구조의 닮음뿐만 아니라 표현도 닮아있다. 
+                                                글의 어조와 뉘앙스는 디자인에서 컬러톤이며, 비유는 아이콘과 같다. 맞춤법은 디자인에서 정교함을 만드는 Pixel Perfect 작업이다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="paging_box">페이징 위치입니다</div>
+                    </div>
+                    
+                </section>
+
                 <div class="footer-start"></div>
                 <footer>
                     <div class="inner">

@@ -1,5 +1,5 @@
 :root {
-    --board-active-color: #365A91;
+    --board-active-color: #F28C28;
 }   
 
 /* 관리자 메뉴 */
@@ -33,7 +33,10 @@
 }
 
 /* 게시판 공통 */
-.boardArti{ padding: 100px 0; }
+.boardArti{ padding: 50px 0; }
+@media screen and (max-width: 650px) {
+    .boardArti{ padding: 30px 0 50px 0; }
+}
 
 /* 게시판 타이틀 */
 .boardArti .boardBanner{ margin-bottom: 50px; text-align: center; }
@@ -57,7 +60,7 @@
 .basicBoardArti .basicList > li .item .center{ text-align: center; }
 .basicBoardArti .basicList > li .item .chk{ flex-shrink: 0; width: 22px; }
 .basicBoardArti .basicList > li .item .number{ flex-shrink: 0; width: 50px; overflow: hidden; }
-.basicBoardArti .basicList > li .item .number.on{ color: #365A91; }
+.basicBoardArti .basicList > li .item .number.on{ color: #F28C28; }
 .basicBoardArti .basicList > li .item .title{ justify-content: center; flex-grow: 1; overflow: hidden; gap: 2px; display: flex; gap: 2px;  }
 .basicBoardArti .basicList > li .item .title .iconWrap{ display: flex; align-items: center; gap: 2px; align-items: center; }
 .basicBoardArti .basicList > li .item .title a{ width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -88,9 +91,9 @@
 .boardArti .infoBoxWrap .infoBoxList > li.full{ width: 100%; }
 .boardArti .infoBoxWrap .infoBoxList > li.half{ width: calc(100% / 2); }
 .boardArti .infoBoxWrap .infoBoxList > li .infoBox{display: flex; height: 100%; }
-.boardArti .infoBoxWrap .infoBoxList > li .infoBox .label{ display: flex; align-items: center; justify-content: center; height: auto; background-color: #F7F7F7; padding: 16px; font-size: 13px; width: 120px; flex-shrink: 0; }
+.boardArti .infoBoxWrap .infoBoxList > li .infoBox .label{ display: flex; align-items: center; justify-content: center; height: auto; /*background-color: #F7F7F7;*/ padding: 16px; font-size: 13px; width: 120px; flex-shrink: 0; }
 .boardArti .infoBoxWrap .infoBoxList > li .infoBox .txtBox{ padding: 5px 16px; flex-grow: 1; font-size: 14px; display: flex; align-items: center; }
-.boardArti .infoBoxWrap .infoBoxList > li .infoBox .txtBox .ipt{ width: 100%; padding: 10px 10px; border: 1px solid #E6E6E6; border-radius: 4px; }
+.boardArti .infoBoxWrap .infoBoxList > li .infoBox .txtBox .ipt{ background: transparent; width: 100%; padding: 10px 10px; border: 1px solid #E6E6E6; border-radius: 4px; }
 .boardArti .infoBoxWrap .infoBoxList > li .infoBox .txtBox select.ipt{ max-width: 280px; }
 
 
@@ -106,7 +109,7 @@
 /* 글쓰기 링크 */
 .boardWriteArti .addArti{ margin-top: 50px; display: flex; flex-direction: column; gap: 16px; }
 .boardWriteArti .addArti .addWrap .tag{ font-size: 0.9em; margin-bottom: 5px; }
-.boardWriteArti .addArti .addWrap .ipt{ padding: 16px; border-radius: 8px; border: 1px solid #E6E6E6; font-size: 14px; width: 100%; padding-left: 50px; background-repeat: no-repeat; background-position: left 16px center;  }
+.boardWriteArti .addArti .addWrap .ipt{ background: transparent; padding: 16px; border-radius: 8px; border: 1px solid #E6E6E6; font-size: 14px; width: 100%; padding-left: 50px; background-repeat: no-repeat; background-position: left 16px center;  }
 .boardWriteArti .addArti .addWrap .ipt.link{  background-image: url('../img/boardImg/linkwrite.png'); }
 .boardWriteArti .addArti .addWrap .ipt.file{  background-image: url('../img/boardImg/folder.png'); }
 
@@ -130,7 +133,7 @@
 /* 게시판 상세페이지 */
 .boardViewArti .viewContent img{ max-width: 100%; display: inline-block; }
 .boardViewArti .viewAddArti{ display: flex; flex-direction: column; gap: 10px; margin-top: 50px; }
-.boardViewArti .viewAddArti .item{ padding: 16px; border-radius: 8px; border: 1px solid #E6E6E6; background-color: #fff; font-size: 14px; padding-left: 50px; background-repeat: no-repeat; background-position: center left 16px; }
+.boardViewArti .viewAddArti .item{ padding: 16px; border-radius: 8px; border: 1px solid #E6E6E6; background-color: transparent; font-size: 14px; padding-left: 50px; background-repeat: no-repeat; background-position: center left 16px; }
 .boardViewArti .viewAddArti .item.file{ background-image: url('../img/boardImg/folder.png'); }
 .boardViewArti .viewAddArti .item.link{ background-image: url('../img/boardImg/linkwrite.png'); }
 .boardViewArti .viewAddArti .item .t2{ font-size: 0.9em; color: #999; }
@@ -151,7 +154,7 @@
 
 .boardViewArti .prevNextArti{ margin-top: 50px; overflow: hidden; border-top: 1px solid #E5E5E5; font-size: 14px; }
 .boardViewArti .prevNextArti .item{ display: flex; overflow: hidden; border-bottom: 1px solid #E5E5E5; }
-.boardViewArti .prevNextArti .item .label{ padding: 16px; width: 120px; background-color: #F7F7F7; font-size: 0.9em; flex-shrink: 0; }
+.boardViewArti .prevNextArti .item .label{ padding: 16px; width: 120px; /*background-color: #F7F7F7;*/ font-size: 0.9em; flex-shrink: 0; }
 .boardViewArti .prevNextArti .item .titleBox{ padding: 16px; display: flex; align-items: center; overflow: hidden;  }
 .boardViewArti .prevNextArti .item .titleBox a{ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } 
 

@@ -75,7 +75,7 @@
                         <ul class="sub-list">
                             <li><a href="./sub5_1.html">Notice</a></li>
                             <li><a href="./sub5_2.html">FAQ</a></li>
-                            <li><a href="./sub5_3.html">Support</a></li>
+                            <li><a href="./sub5_3.html" class="suport-btn">Support</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -111,25 +111,12 @@
                     <ul class="sub-menu-list">
                         <li><a href="./sub5_1.html" class="sub-item">Notice</a></li>
                         <li><a href="./sub5_2.html" class="sub-item">FAQ</a></li>
-                        <li><a href="./sub5_3.html" class="sub-item">Support</a></li>
+                        <li><a href="./sub5_3.html" class="sub-item suport-btn">Support</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
-        <!--개인정보처리방침-->
-        <section class="privacyPopup" id="privacyPopup">
-            <div class="inner">
-                <div class="contentWrap">
-                    <div class="titleBox">
-                        <span>개인정보 처리방침</span>
-                        <img src="./img/common/close-btn.png" alt="closeBtn" class="closeBtn">
-                    </div>
-                    <div class="contentBox">
-                        해당 홈페이지에 맞는 개인정보처리방침을 입력합니다.           
-                    </div>
-                </div>
-            </div>
-        </section>
+       
         <main id="smooth-wrapper">
             <article id="smooth-content">
                 
@@ -138,12 +125,12 @@
                     <section class="main-visual">
                         <div class="youtube-background"data-vbg-autoplay="true" data-vbg="https://youtu.be/lOOxHmjQjMQ?si=uuSw2g6AdALfGDQ7" ></div>
                     </section>
-                    <section class="logo-section">
+                    <section class="logo-section ani">
                         <img src="./img/main/logo-section/left-bg.png" alt="왼쪽" class="bg">
                         <img src="./img/main/logo-section/logo.svg" alt="blessed flower market" class="logo" />
                         <img src="./img/main/logo-section/right-bg.png" alt="오른쪽" class="bg">
                     </section>
-                    <section class="everyday-section">
+                    <section class="everyday-section ani">
                         <div class="inner">
                             <img src="./img/main/everyday-section/visual.jpg" alt="꽃" class="visual" />
                             <h2>Living with Flowers, <br class="moBr"/>Every Day</h2>
@@ -156,12 +143,12 @@
                             </div>
                         </div>
                     </section>
-                    <section class="main-title-section">
+                    <section class="main-title-section ani">
                         <div class="inner">
                             <h2>Curated Floral Collection</h2>
                         </div>
                     </section>
-                    <section class="gallery-section">
+                    <section class="gallery-section ani">
                         <div class="inner">
                             <ul class="gallery-list">
                                 <!--최대 6개 게시판으로 연동-->
@@ -219,12 +206,12 @@
                             </div>
                         </div>
                     </section>
-                    <section class="main-title-section">
+                    <section class="main-title-section ani">
                         <div class="inner">
                             <h2>Where Flowers Meet You</h2>
                         </div>
                     </section>
-                    <section class="store-section">
+                    <section class="store-section ani">
                         <div class="inner">
                             <ul class="store-list type1">
                                 <!--5개 고정-->
@@ -281,12 +268,12 @@
                             </div>
                         </div>
                     </section>
-                    <section class="main-title-section">
+                    <section class="main-title-section ani">
                         <div class="inner">
                             <h2>The Blooming Note</h2>
                         </div>
                     </section>
-                    <section class="note-section">
+                    <section class="note-section ani">
                         <div class="inner">
                             <ul class="note-list">
                                 <li>
@@ -359,7 +346,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="menu-section">
+                    <section class="menu-section ani">
                         <a href="./sub5_1.html">
                             <div class="real" style="background-image: url('./img/main/menu-section/bg1.jpg');"></div>
                             <div class="t1">Notice / FAQ</div>
@@ -429,5 +416,72 @@
                 </footer>
             </article>
         </main>
+
+        <!--고객센터 문의-->
+        <section class="apply-popup">
+            <div class="inner">
+                <article class="content-arti">
+                    <div class="btn-div">
+                        <button type="button" class="close-btn">
+                            <img src="./img/sub/sub3/close-icon.svg" alt="닫기" class="icon" />
+                        </button>
+                    </div>
+                    <div class="white-content">
+                        <h5>문의하기</h5>
+                        <ul class="formList">
+                            <li class="half">
+                                <div class="label">이름 <span>*</span></div>
+                                <div class="iptBox">
+                                    <input type="text" required placeholder="내용을 입력해주세요" class="ipt" />
+                                </div>
+                            </li>
+                            <li class="half">
+                                <div class="label">연락처 <span>*</span></div>
+                                <div class="iptBox">
+                                    <input type="text" required placeholder="내용을 입력해주세요" class="ipt" />
+                                </div>
+                            </li>
+                            <li class="">
+                                <div class="label">이메일 <span>*</span></div>
+                                <div class="iptBox">
+                                    <input type="email" required placeholder="내용을 입력해주세요" class="ipt" />
+                                </div>
+                            </li>
+                            <li>
+                                <div class="label">문의내용 <span>*</span></div>
+                                <div class="iptBox">
+                                    <textarea name="" placeholder="내용을 입력해주세요" class="ipt"></textarea>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- ✅ 동의 체크박스 -->
+                        <div class="agreeCheckDiv">
+                            <label>
+                                <input type="checkbox"/>
+                                <div class="textBox">개인정보 처리방침 동의 <span class="privacyPopupBtn">(확인)</span></div>
+                            </label>
+                        </div>
+                        <div class="form-btn-wrap">
+                            <button type="submit" class="submit-btn">문의하기</button>
+                        </div>
+
+                    </div>
+                </article>
+            </div>
+        </section>
+         <!--개인정보처리방침-->
+         <section class="privacyPopup" id="privacyPopup">
+            <div class="inner">
+                <div class="contentWrap">
+                    <div class="titleBox">
+                        <span>개인정보 처리방침</span>
+                        <img src="./img/common/close-btn.png" alt="closeBtn" class="closeBtn">
+                    </div>
+                    <div class="contentBox">
+                        해당 홈페이지에 맞는 개인정보처리방침을 입력합니다.           
+                    </div>
+                </div>
+            </div>
+        </section>
     </body>
 </html>
