@@ -316,7 +316,7 @@ footer .info-list .label{ flex-shrink: 0; font-family: "KoPubWorldBatang"; flex-
 .sub .sub-banner{ border-bottom: 1px solid #F28C28; font-family: "NanumMyeongjo"; color: #F7F6F2; background-color: #000; padding: 74px 0; }
 .sub .sub-banner .inner{ display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .sub .sub-banner .bar{ width: 80px; height: 1px; background-color: #fff; margin: 17px 0 5px 0; }
-.sub .sub-banner h2{ font-size: 80px;  }
+.sub .sub-banner h2{ font-family: "NanumMyeongjo"; font-size: 80px;  }
 
 @media screen and (max-width: 1250px) {
     .sub .sub-banner .logo{ width: 140px; }  
@@ -470,7 +470,7 @@ section.line-bar{ height: 1px; background: linear-gradient(90deg, #2E2E2E 0%, #F
 
 /* .sub3 .sub-banner */
 .sub3 .sub-banner{ border-bottom: none; background-color: #000; } 
-.sub3 .main-title-section{ background-color: #000; }
+.sub3 .main-title-section{ background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #111; }
 
 .sub3 .section1{ background-color: #343A40; padding: 48px 0 62px 0; }
 .sub3 .section1 .map-arti{ display: flex; gap: 40px; }
